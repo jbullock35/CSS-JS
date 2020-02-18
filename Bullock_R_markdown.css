@@ -1,0 +1,94 @@
+html {
+  font-size: 103%;  /*  "rem" units will refer back to this "root element"  */
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.7;
+  font-size: 103%;
+}
+
+p {
+  font-size: 1em;
+  margin: unset;
+  margin-bottom: 2ex;
+  max-width: 55ch;
+}
+
+/*
+.container-fluid, .main-container {
+  max-width: 100000px !important;
+}
+*/
+
+
+/* LISTS */
+ol, ul {
+  padding-left: 2em;
+}
+li { 
+  margin-top: 2ex; 
+  max-width: 55ch;  
+}
+li:first-of-type {
+  margin-top: 1ex;
+}
+li li {margin-top: 1ex; }
+li p {
+  margin-bottom: 0em;
+  text-indent: 2em;
+}
+li p:first-of-type {    /* Don't indent first paragaph in bullet list. */
+  text-indent: 0em;
+}
+
+
+
+/* SECTION HEADINGS */
+h1, .title, h1.title { 
+  font-size: 1.85rem;
+}
+h2 { 
+  font-size: 1.55rem;
+  margin-top: 4.5em; 
+}
+h3 { 
+  font-size: 1.35rem;
+  margin-top: 3.0em; 
+}
+h4 { 
+  font-size: 1.2rem;
+  margin-top: 2.0em; 
+}  
+
+h1, h2, h3, h4 { 
+  break-after: avoid;
+  line-height: 1.4em;
+  margin-bottom: 0.4ex;
+}
+.noPageBreak {
+  break-inside: avoid;   /* Ad hoc solution, requires adding div where bad breaks appear. */
+}
+.pageBreak {
+  break-after: page;
+}
+
+
+
+/* SPECIAL RULES FOR PRINTING */
+@page { margin: 1in; }
+
+@media print {
+  body { font-size: 16pt; }
+  a[href]:after {
+    content: unset;  /*  don't print URL after a link  */
+  }
+}
+
+
+/* SPECIAL RULES FOR SCREEN */
+@media screen {
+  body {
+    margin-bottom: 5em;  /* add white space to bottom of page */
+  }
+}
