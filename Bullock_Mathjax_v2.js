@@ -9,8 +9,8 @@
   MathJax.Hub.Config({ 
     AssistiveMML: { disabled: true },  
     jax: ["input/TeX", "output/CommonHTML"],
-    CommonHTML: { scale: 195, linebreaks: { automatic: false } }, 
-    "HTML-CSS": { scale: 190, linebreaks: { automatic: false } }, 
+    CommonHTML: { scale: 95, linebreaks: { automatic: false } }, 
+    "HTML-CSS": { scale: 90, linebreaks: { automatic: false } }, 
     SVG: { linebreaks: { automatic:false } }, 
     displayAlign: "center",
     TeX: {
