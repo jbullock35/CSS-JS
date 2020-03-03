@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
 @page { margin: 1in; }
 
 @media print {
-  body { font-size: 16pt; }
+  /* body { font-size: 16pt; }  */
   a[href]:after {
     content: unset;  /*  don't print URL after a link  */
   }
