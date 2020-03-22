@@ -20,7 +20,9 @@
         cov: ["\\textrm{cov}\\backtwo\\left(#1\\right)", 1],
         E: ["E\\backtwo\\left[#1\\right]", 1],
         independent: "\\perp\\!\\!\\!\\perp",
+        sd: ["\\textrm{sd}\\backtwo\\left(#1\\right)", 1],
         var: ["\\textrm{var}\\backtwo\\left(#1\\right)", 1]
+
       }
     }
   });
