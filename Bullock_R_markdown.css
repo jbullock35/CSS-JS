@@ -15,6 +15,16 @@ p {
   max-width: 55ch;
 }
 
+
+
+/*
+.container-fluid, .main-container {
+  max-width: 100000px !important;
+}
+*/
+
+
+/* FIGURES */
 p.caption {
   /* Make caption text a little tighter than normal text. */
   font-size: 0.95em;
@@ -28,13 +38,13 @@ p.caption {
   text-justify: inter-word;
 }
 
-
-
-/*
-.container-fluid, .main-container {
-  max-width: 100000px !important;
+p + div.figure {
+  /* Increase margin for  figures that are immediately preceded by a paragraph. */
+  margin-top: 4ex;
 }
-*/
+
+
+
 
 
 /* LISTS */
