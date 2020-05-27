@@ -15,6 +15,21 @@ p {
   max-width: 55ch;
 }
 
+p.caption {
+  /* Make caption text a little tighter than normal text. */
+  font-size: 0.95em;
+  line-height: 1.4;
+  margin: unset;
+  margin-left: 1em;
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+  max-width: 67ch;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+
 /*
 .container-fluid, .main-container {
   max-width: 100000px !important;
