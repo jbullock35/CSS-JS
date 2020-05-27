@@ -15,6 +15,11 @@ p {
   max-width: 55ch;
 }
 
+pre {
+  /* Let borders for code blocks conform more nicely to the surrounding paragraphs. */
+  display: inline-block;
+  min-width: 72ch;
+}
 
 
 /*
