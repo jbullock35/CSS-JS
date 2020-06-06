@@ -21,6 +21,10 @@ pre {
   min-width: 72ch;
 }
 
+.chunkOutputSpacer {
+  /* Add space between chunk source and chunk output */
+  height: 2ex;
+}
 
 /*
 .container-fluid, .main-container {
