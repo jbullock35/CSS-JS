@@ -65,11 +65,11 @@ li:first-of-type {
 }
 li li {margin-top: 1ex; }
 li p {
-  margin-bottom: 0em;
+  margin-bottom: 0;
   text-indent: 2em;
 }
 li p:first-of-type {    /* Don't indent first paragaph in bullet list. */
-  text-indent: 0em;
+  text-indent: 0;
 }
 
 
