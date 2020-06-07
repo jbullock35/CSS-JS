@@ -21,6 +21,11 @@ pre {
   min-width: 72ch;
 }
 
+.chunkOutput {
+  color: black;
+  font-style: normal;
+}
+
 .chunkOutputSpacer {
   /* Add space between chunk source and chunk output */
   height: 2ex;
