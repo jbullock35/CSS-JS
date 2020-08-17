@@ -121,6 +121,15 @@ h1, h2, h3, h4 {
 
 
 
+/* FLOATING TABLE OF CONTENTS */
+/* By default, a floating TOC will add huge vertical whitespace 
+   to the end of the page. This CSS rule fixes the problem. */
+.tocify-extend-page {
+  height: 0 !important;
+}
+
+
+
 /* SPECIAL RULES FOR PRINTING */
 @page { margin: 1in; }
 
