@@ -38,6 +38,7 @@ pre {
 */
 
 
+
 /* FIGURES */
 p.caption {
   /* Make caption text a little tighter than normal text. */
@@ -117,6 +118,13 @@ h1, h2, h3, h4 {
 }
 .pageBreakBefore {
   break-before: page;
+}
+
+
+
+/* TABLES */
+th { 
+  line-height: 2.5ex !important;
 }
 
 
