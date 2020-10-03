@@ -1,0 +1,165 @@
+
+/* For all content on normal slides */
+.remark-slide-content {
+  font-family: Cambria, Georgia, serif;
+  font-size: 22pt;
+  padding: 1em 8em 1em 3em;
+  line-height: 1.4;
+}
+
+.remark-slide-content h2 {
+	margin-left: -0.1em;
+}
+
+a {
+  text-decoration:none;
+}
+
+h1, h2, h3 {
+  font-family: "Calibri Light", "Calibri", "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+}
+
+
+
+/* Spacing between list items */
+li > ul {
+  margin-top: 2ex;
+}
+li:not(:last-child) {
+  margin-bottom: 4ex;
+}
+.tightList li:first-child {
+	margin-top: -1ex;
+}
+.tightList li:not(:last-child) {
+  margin-bottom: 1.33ex;
+}
+.tightListHalf li:first-child {
+	margin-top: -.5ex;
+}
+.tightListHalf li:not(:last-child) {
+  margin-bottom: 2.5ex;
+}
+
+
+
+/* CODE */
+pre { 
+  font-size: 18pt !important;
+  margin-bottom: 0ex;
+}
+.remark-code-line {
+  padding-left: 1em;
+  font-size: 18pt;
+}
+
+
+ 
+/* TITLE SLIDE */
+.title-slide {
+	margin-top: 0;
+	padding-left: 11%;
+	padding-top: 25%;
+	line-height: 4ex;
+	background-size: auto;
+}
+
+/* Set the margin-block properties in an absolute unit like px, not a 
+   relative unit like em. The relative units will be transformed into one 
+   value for h1 elements, another value for h2 and h3 elements. I don't 
+   want that. */
+.title-slide h1, .title-slide h2, .title-slide h3 {
+	text-align: left;
+	margin-block-start: 37px;
+	margin-block-end: 37px;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+
+
+/* PRESENTER NOTES */
+/* Eliminate the notes for the next slide, thereby making more space for notes
+   on the current slide. */
+.remark-notes {
+	font-size: 135%;
+}
+.remark-notes li:first-child {
+	margin-top: -1ex;
+}
+.remark-notes li:not(:last-child) {
+  margin-bottom: 1.33ex;
+}
+
+
+
+.remark-notes-current-area {
+  height: 100% !important;	
+}
+.remark-notes-preview-area {
+  display: none;
+}
+
+
+
+/* TABLES */
+tr > td { text-align: right ! important; }  /* right-align first column */
+th:first-child, td:first-child             { padding-right: 0.25em; }
+th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
+
+
+
+
+
+
+/* SPECIAL SLIDES */
+.upOneLine {
+	padding-top: 0;
+	margin-top: 0;
+}
+.upOneLine h2 {
+	padding-top: 1ex;
+	margin-top: 0;
+}
+.whiteText {
+  color: white;
+}
+
+
+/* MISCELLANY */
+.blue { color:blue; }
+.red  { color:red; }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.displayEquationLeft .MathJax_Display {
+  text-align: left !important;
+}
+.longerTitle h2 {
+	margin-right: -40em;
+}
+.noIndentList li {
+	margin-left: -0.3em;
+	padding-left: 0;
+}
+.rightPaddingMinusOneEm p {
+  margin-right: -1em;
+}
+.rightPaddingMinusTwoEm p {
+  margin-right: -2em;
+}
+.rightPaddingPlusOneEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview) {
+	padding-right: 1em;
+}
+.rightPaddingPlusTwoEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview) {
+	padding-right: 2em;
+}
+.remark-slide-number {
+  font-size: 75%;
+}
+

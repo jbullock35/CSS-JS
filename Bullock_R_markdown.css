@@ -31,6 +31,11 @@ pre {
   height: 2ex;
 }
 
+.tableNarrow { 
+  max-width: 55ch; 
+  margin-left: 0 !important;
+}
+
 /*
 .container-fluid, .main-container {
   max-width: 100000px !important;
@@ -107,6 +112,9 @@ h1, h2, h3, h4 {
   line-height: 1.4em;
   margin-bottom: 0.4ex;
 }
+
+
+/* PAGE BREAKS */
 .noPageBreakBefore {
   break-before: avoid;
 }
@@ -123,9 +131,9 @@ h1, h2, h3, h4 {
 
 
 /* TABLES */
-th { 
-  line-height: 2.5ex !important;
-}
+table.table { margin-bottom: 5ex; }  /* table created by kableExtra::kbl() */
+
+th { line-height: 2.5ex !important; }
 
 
 
@@ -139,7 +147,12 @@ th {
 
 
 /* SPECIAL RULES FOR PRINTING */
-@page { margin: 1in; }
+@page { 
+  margin: 1in; 
+  @bottom-center {  /* not supported: see https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(CSS_support) */
+    content: counter(page);
+  }
+}
 
 @media print {
   /* body { font-size: 16pt; }  */
