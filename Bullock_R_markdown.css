@@ -8,6 +8,10 @@ body {
   font-size: 103%;
 }
 
+code {
+  font-size: 110%;  /* affects only inline code displays */
+}
+
 p {
   font-size: 1em;
   margin: unset;
@@ -156,6 +160,9 @@ th { line-height: 2.5ex !important; }
 
 @media print {
   /* body { font-size: 16pt; }  */
+  a {
+    text-decoration: underline;
+  }
   a[href]:after {
     content: unset;  /*  don't print URL after a link  */
   }
