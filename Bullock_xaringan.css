@@ -61,7 +61,7 @@ pre {
 	margin-top: 0;
 	padding-left: 11%;
 	padding-top: 25%;
-	line-height: 4ex;
+	line-height: 1;
 	background-size: auto;
 }
 
@@ -71,8 +71,8 @@ pre {
    want that. */
 .title-slide h1, .title-slide h2, .title-slide h3 {
 	text-align: left;
-	margin-block-start: 37px;
-	margin-block-end: 37px;
+	margin-block-start: 43px;
+	margin-block-end: 43px;
 }
 
 .title-slide .remark-slide-number {
