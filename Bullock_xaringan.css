@@ -12,7 +12,7 @@
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 h1, h2, h3 {
@@ -22,6 +22,28 @@ h1, h2, h3 {
 
 
 
+/* CODE */
+/* Code blocks are wrapped in pre > code.remark-code > div.remark-code-line */
+pre { 
+  font-size: 18pt !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 120%;
+}
+.remark-code-line {
+  padding-left: 1em;
+  font-size: 18pt;
+}
+
+.codeBlockSmaller .remark-code-line { 
+  font-size: 15pt;
+  line-height: 1.6;
+}
+
+
+
+
+/* LISTS */
 /* Spacing between list items */
 li > ul {
   margin-top: 2ex;
@@ -44,18 +66,35 @@ li:not(:last-child) {
 
 
 
-/* CODE */
-pre { 
-  font-size: 18pt !important;
-  margin-bottom: 0ex;
+/* PRESENTER NOTES */
+/* Eliminate the notes for the next slide, thereby making more space for notes
+   on the current slide. */
+.remark-notes {
+	font-size: 135%;
 }
-.remark-code-line {
-  padding-left: 1em;
-  font-size: 18pt;
+.remark-notes li:first-child {
+	margin-top: -1ex;
+}
+.remark-notes li:not(:last-child) {
+  margin-bottom: 1.33ex;
+}
+
+.remark-notes-current-area {
+  height: 100% !important;	
+}
+.remark-notes-preview-area {
+  display: none;
 }
 
 
- 
+
+/* TABLES */
+tr > td { text-align: right ! important; }  /* right-align first column */
+th:first-child, td:first-child             { padding-right: 0.25em; }
+th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
+
+
+
 /* TITLE SLIDE */
 .title-slide {
 	margin-top: 0;
@@ -81,35 +120,6 @@ pre {
 
 
 
-/* PRESENTER NOTES */
-/* Eliminate the notes for the next slide, thereby making more space for notes
-   on the current slide. */
-.remark-notes {
-	font-size: 135%;
-}
-.remark-notes li:first-child {
-	margin-top: -1ex;
-}
-.remark-notes li:not(:last-child) {
-  margin-bottom: 1.33ex;
-}
-
-
-
-.remark-notes-current-area {
-  height: 100% !important;	
-}
-.remark-notes-preview-area {
-  display: none;
-}
-
-
-
-/* TABLES */
-tr > td { text-align: right ! important; }  /* right-align first column */
-th:first-child, td:first-child             { padding-right: 0.25em; }
-th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
-
 
 
 
@@ -130,8 +140,9 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 
 
 /* MISCELLANY */
-.blue { color:blue; }
-.red  { color:red; }
+.blue  { color: blue; }
+.green { color: green; }
+.red   { color: red; }
 .center {
   display: block;
   margin-left: auto;
@@ -140,6 +151,10 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 .displayEquationLeft .MathJax_Display {
   text-align: left !important;
 }
+.inline .MathJax_Display {  /* Use this to set display equations inline. */
+  display: inline !important;
+}
+
 .longerTitle h2 {
 	margin-right: -40em;
 }
@@ -147,12 +162,31 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 	margin-left: -0.3em;
 	padding-left: 0;
 }
-.rightPaddingMinusOneEm p {
+.noMargin {
+	width: 10000px;
+}
+
+
+/* We cannot use negative quantities with "padding-right". In turn, we can't 
+   use the ":not" language of the "PlusOneEm" and "PlusTwoEm" styles when 
+   defining the "MinusOneEm" and "MinusTwoEm" styles: doing so screws up the
+   display.  [2020 10 13] */
+
+.rightPaddingMinusOneEm li, .rightPaddingMinusOneEm p {
   margin-right: -1em;
 }
-.rightPaddingMinusTwoEm p {
+.rightPaddingMinusTwoEm li, .rightPaddingMinusTwoEm p {
   margin-right: -2em;
 }
+.rightPaddingMinusThreeEm li, .rightPaddingMinusThreeEm p {
+  margin-right: -3em;
+}
+.rightPaddingMinusFourEm li, .rightPaddingMinusFourEm p {
+  margin-right: -4em;
+}
+
+
+
 .rightPaddingPlusOneEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview) {
 	padding-right: 1em;
 }
