@@ -40,6 +40,15 @@ pre {
   line-height: 1.6;
 }
 
+.codeBlockSmallest .remark-code-line { 
+  font-size: 13pt;
+  line-height: 1.3;
+}
+
+/* Give inline code the same background as normal code blocks. */
+.remark-inline-code {
+  background: #f8f8f8;
+}
 
 
 
