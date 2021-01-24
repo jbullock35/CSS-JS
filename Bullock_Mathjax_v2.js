@@ -7,6 +7,8 @@
   // <script type="text/x-mathjax-config"> container.  [2020 02 17]
 
   // On defining TeX macros, see http://docs.mathjax.org/en/latest/input/tex/macros.html.
+  // I've had some trouble getting \ensuremath{} to work, though Stack 
+  // Overflow posts suggest that it does.  [2021 01 24]
 
   MathJax.Hub.Config({ 
     AssistiveMML: { disabled: true },  
@@ -22,7 +24,7 @@
         cov: ["\\textrm{cov}\\backtwo\\left(#1\\right)", 1],
         E: ["E\\backtwo\\left[#1\\right]", 1],
         independent: "\\perp\\!\\!\\!\\perp",
-        matwo: ["\\ensuremath{\\left[\\begin{array}{#1} #2 & #3\\\\#4 & #5\\end{array}\\right]}", 5],
+        matwo: ["\\left[\\begin{array}{#1} #2 & #3\\\\#4 & #5\\end{array}\\right]", 5, "cc"],
         sd: ["\\textrm{sd}\\backtwo\\left(#1\\right)", 1],
         var: ["\\textrm{var}\\backtwo\\left(#1\\right)", 1]
 
