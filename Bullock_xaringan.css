@@ -33,6 +33,7 @@ pre {
 .remark-code-line {
   padding-left: 1em;
   font-size: 18pt;
+  background: #F8F8F8;  /* Chunk output will have same shading as R code. Do I really want this?  */
 }
 
 .codeBlockSmaller .remark-code-line { 
