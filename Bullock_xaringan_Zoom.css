@@ -1,0 +1,13 @@
+/* Extra CSS for use with xaringan slides when recording lectures. The CSS
+   moves presenter notes to the very top of the screen (just below the 
+   camera), and it makes the presenter-notes space shorter, so that speakers
+   won't cast their eyes far down the monitor as they are being recorded. */
+
+.remark-top-area {
+  display: none;
+}
+
+.remark-bottom-area {
+  top: -1.5em;
+  width: 55ch;
+}
