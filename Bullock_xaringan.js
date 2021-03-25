@@ -19,5 +19,7 @@
     let myLists4 = document.querySelectorAll(".listStart4 ol");
     myLists4.forEach(function (x) { x.setAttribute("start", 4) } );
 
+    let myLists5 = document.querySelectorAll(".listStart5 ol");
+    myLists5.forEach(function (x) { x.setAttribute("start", 5) } );
 //}
 </script>
