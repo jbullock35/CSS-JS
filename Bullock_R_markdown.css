@@ -49,6 +49,11 @@ pre {
   height: 2ex;
 }
 
+.hljs-comment {
+  /* comments in code blocks */
+  color: #676767;
+}
+
 
 
 
@@ -143,6 +148,12 @@ h1, h2, h3, h4 {
 table.table { margin-bottom: 5ex; }  /* table created by kableExtra::kbl() */
 
 th { line-height: 2.5ex !important; }
+
+tfoot > tr > td {                    /* notes at bottom of table */
+  border-top: 1px solid black !important;
+  padding-top: 4ex !important; 
+  padding-left: 1em !important;
+}    
 
 
 
