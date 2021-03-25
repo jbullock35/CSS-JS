@@ -26,8 +26,8 @@
         independent: "\\perp\\!\\!\\!\\perp",
         matwo: ["\\left[\\begin{array}{#1} #2 & #3\\\\#4 & #5\\end{array}\\right]", 5, "cc"],
         sd: ["\\textrm{sd}\\backtwo\\left(#1\\right)", 1],
-        var: ["\\textrm{var}\\backtwo\\left(#1\\right)", 1]
-
+        var: ["\\textrm{var}\\backtwo\\left(#1\\right)", 1],
+        vtwo: ["\\left[\\begin{array}{#1} #2\\\\#3\\end{array}\\right]", 3, "c"]
       }
     }
   });
