@@ -33,7 +33,15 @@ pre {
 .remark-code-line {
   padding-left: 1em;
   font-size: 18pt;
+}
+
+.remark-code-line:not(.remark-code-line-highlighted) {
   background: #F8F8F8;  /* Chunk output will have same shading as R code. Do I really want this?  */
+}
+
+/* Give inline code the same background as normal code blocks. */
+.remark-inline-code {
+  background: #f8f8f8;
 }
 
 .codeBlockSmaller .remark-code-line { 
@@ -46,10 +54,6 @@ pre {
   line-height: 1.3;
 }
 
-/* Give inline code the same background as normal code blocks. */
-.remark-inline-code {
-  background: #f8f8f8;
-}
 
 
 
