@@ -8,8 +8,18 @@
 }
 
 .remark-bottom-area {
-  top: -1.5em;
-  width: 55ch;
+  top: -1.5em !important;
+  width: 60ch;
+  height: 30ex;
+}
+
+.remark-notes {
+	font-size: 125%;     /* versus 135% when not recording or presenting by Zoom */
+	padding-right: 20px;  /* a little space between last characters and the control bar */
+}
+
+.remark-notes p:last-child {
+  margin-bottom: 5em !important;  /* allow scrolling last lines of notes to top of screen */
 }
 
 
