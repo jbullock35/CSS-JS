@@ -181,7 +181,7 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
   display: inline !important;
 }
 
-.longerTitle h2 {
+.longerTitle h1, .longerTitle h2 {
 	margin-right: -40em;
 }
 .noIndentList li {
