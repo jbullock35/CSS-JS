@@ -62,9 +62,15 @@ pre {
 li > ul {
   margin-top: 2ex;
 }
+
 li:not(:last-child) {
   margin-bottom: 4ex;
 }
+
+li > ul > li:not(:last-child) {
+  margin-bottom: 2ex !important;
+}
+
 .tightList li:first-child {
 	margin-top: -1ex;
 }
