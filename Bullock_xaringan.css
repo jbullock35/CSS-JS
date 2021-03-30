@@ -219,10 +219,10 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 
 
 
-.rightPaddingPlusOneEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview) {
+.rightPaddingPlusOneEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview):not(a) {
 	padding-right: 1em;
 }
-.rightPaddingPlusTwoEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview) {
+.rightPaddingPlusTwoEm :not(h2):not(.remark-slide-number):not(em):not(.MathJax):not(.MathJax_Preview):not(a) {
 	padding-right: 2em;
 }
 .remark-slide-number {
