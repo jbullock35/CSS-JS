@@ -7,7 +7,7 @@
   line-height: 1.4;
 }
 
-.remark-slide-content h2 {
+.remark-slide-content h1, .remark-slide-content h2 {
 	margin-left: -0.1em;
 }
 
