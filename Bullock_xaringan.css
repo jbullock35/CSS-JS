@@ -72,16 +72,16 @@ li > ul > li:not(:last-child) {
 }
 
 .tightList li:first-child {
-	margin-top: -1ex;
+	margin-top: -1ex !important;
 }
 .tightList li:not(:last-child) {
-  margin-bottom: 1.33ex;
+  margin-bottom: 1.33ex !important;
 }
 .tightListHalf li:first-child {
-	margin-top: -.5ex;
+	margin-top: -.5ex !important;
 }
 .tightListHalf li:not(:last-child) {
-  margin-bottom: 2.5ex;
+  margin-bottom: 2.5ex !important;
 }
 
 
