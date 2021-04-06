@@ -39,9 +39,11 @@ pre {
   background: #F8F8F8;  /* Chunk output will have same shading as R code. Do I really want this?  */
 }
 
-/* Give inline code the same background as normal code blocks. */
+/* Give inline code the same background as normal code blocks, and shrink
+   it to match normal text size. */
 .remark-inline-code {
   background: #f8f8f8;
+  font-size: 90%;
 }
 
 .codeBlockSmaller .remark-code-line { 
