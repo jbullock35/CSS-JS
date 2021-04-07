@@ -218,6 +218,9 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 .rightPaddingMinusFourEm li, .rightPaddingMinusFourEm p {
   margin-right: -4em;
 }
+.rightPaddingMinusFiveEm li, .rightPaddingMinusFiveEm p {
+  margin-right: -5em;
+}
 
 
 
