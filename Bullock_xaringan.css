@@ -146,9 +146,6 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 
 
 
-
-
-
 /* SPECIAL SLIDES */
 .upHalfLine {
 	padding-top: 0;
@@ -168,9 +165,16 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 	padding-top: 1ex;
 	margin-top: 0;
 }
+.noSlideNumber .remark-slide-number {
+  display: none;
+}
 .whiteText {
   color: white;
 }
+
+
+
+
 
 
 /* MISCELLANY */
@@ -185,6 +189,11 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 .displayEquationLeft .MathJax_Display {
   text-align: left !important;
 }
+.displayEquationLeft .MathJax.MathJax_FullWidth {
+  text-align: left !important;
+}
+
+
 .inline .MathJax_Display {  /* Use this to set display equations inline. */
   display: inline !important;
 }
