@@ -87,6 +87,20 @@ li > ul > li:not(:last-child) {
 }
 
 
+/* MULTIPLE COLUMNS */
+.twoColumn.remark-slide-content {
+  padding-right: 1em;
+}
+.pullLeft35 {  /* Left column will take 35% of available space. */
+  float: left;
+  width: 35%;
+}
+.pullRight {
+  float: right;
+}
+
+
+
 
 /* PRESENTER NOTES */
 /* Eliminate the notes for the next slide, thereby making more space for notes
@@ -213,7 +227,11 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 /* We cannot use negative quantities with "padding-right". In turn, we can't 
    use the ":not" language of the "PlusOneEm" and "PlusTwoEm" styles when 
    defining the "MinusOneEm" and "MinusTwoEm" styles: doing so screws up the
-   display.  [2020 10 13] */
+   display.  [2020 10 13] 
+   
+   But couldn't we just change padding-right for .remark-slide-content?  
+   [2021 04 28]
+*/
 
 .rightPaddingMinusOneEm li, .rightPaddingMinusOneEm p {
   margin-right: -1em;
