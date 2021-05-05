@@ -79,6 +79,13 @@ li > ul > li:not(:last-child) {
 .tightList li:not(:last-child) {
   margin-bottom: 1.33ex !important;
 }
+
+
+/* For "outline" slide in mediationAnalysis.Rmd.
+.tightListHalf li > ul {
+  margin-top: 1.5ex;
+}
+
 .tightListHalf li:first-child {
 	margin-top: -.5ex !important;
 }
