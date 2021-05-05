@@ -101,6 +101,14 @@ li p:first-of-type {    /* Don't indent first paragaph in bullet list. */
   text-indent: 0;
 }
 
+.tightList li:not(:first-child) {
+  margin-top: 0.67ex !important;
+}
+.tightList li:first-child {
+}
+.tightList li:not(:last-child) {
+}
+
 
 
 /* SECTION HEADINGS */
@@ -149,9 +157,11 @@ table.table { margin-bottom: 5ex; }  /* table created by kableExtra::kbl() */
 
 th { line-height: 2.5ex !important; }
 
-tfoot > tr > td {                    /* notes at bottom of table */
+/* Notes at bottom of table. It was 4ex -- why? -- and I changed it to 2ex
+   for gradAdmissions_2020-21_cycle.Rmd.  [2021 05 04]  */
+tfoot > tr > td {                    
   border-top: 1px solid black !important;
-  padding-top: 4ex !important; 
+  padding-top: 2ex !important;
   padding-left: 1em !important;
 }    
 
