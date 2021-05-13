@@ -248,3 +248,21 @@ tfoot > tr > td {
     margin-bottom: 5em;  /* add white space to bottom of page */
   }
 }
+
+
+
+/* SPECIAL PROPERTIES */
+/* https://stackoverflow.com/questions/9808233/is-it-possible-to-put-css-media-rules-inline */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+
+/* Useful for adjusting margins for print but not screen. For example, I can 
+   use <div style="margin-top: var(--up2ex_printOnly)"></div> to raise 
+   everything that follows by 2ex. */
+
+
+/* :root applies to <html> */
+@media print {
+  :root {
+    --up2ex_printOnly: -2ex
+  }
+}
