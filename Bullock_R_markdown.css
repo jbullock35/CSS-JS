@@ -142,6 +142,8 @@ h1, h2, h3, h4 {
 }
 
 
+
+
 /* PAGE BREAKS */
 .noPageBreakBefore {
   break-before: avoid;
@@ -151,6 +153,7 @@ h1, h2, h3, h4 {
 }
 .pageBreak {
   break-after: page;
+  page-break-after: always;
 }
 .pageBreakBefore {
   break-before: page;
@@ -206,7 +209,7 @@ tfoot > tr > td {
 }
 
 @media print {
-  body { font-size: 18pt; }
+  html { font-size: 18pt; }
   
   a {
     text-decoration: underline;
@@ -218,6 +221,13 @@ tfoot > tr > td {
     break-after: avoid;
     page-break-after: avoid;
   }
+
+  /* Ensure no margin-top when <h2> appears after a .pageBreak div. */
+  .pageBreak + h2, .pageBreak + div.level2 h2:first-child {
+    margin-top: 0;
+  }
+  
+  
   .title {
     margin-top: 0 !important;  /* Added for gradAdmissions_2020-21_cycle.Rmd. */
   }
