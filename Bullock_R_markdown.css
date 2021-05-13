@@ -221,13 +221,28 @@ tfoot > tr > td {
     break-after: avoid;
     page-break-after: avoid;
   }
+  
+  /* Added for gradAdmissions_2020-21_cycle.Rmd on 2021-05-13.  */
+  h2 { 
+    margin-top: 4.0em; 
+  }
+  h3 { 
+    font-size: 1.35rem;
+    margin-top: 2.67em; 
+  }
+  h4 { 
+    font-size: 1.2rem;
+    margin-top: 1.78em; 
+  }    
 
   /* Ensure no margin-top when <h2> appears after a .pageBreak div. */
   .pageBreak + h2, .pageBreak + div.level2 h2:first-child {
     margin-top: 0;
   }
   
-  
+  body {
+    margin-top: 0;
+  }
   .title {
     margin-top: 0 !important;  /* Added for gradAdmissions_2020-21_cycle.Rmd. */
   }
@@ -236,6 +251,10 @@ tfoot > tr > td {
   }
   pre {
     min-width: 90ch;  /* printing code blocks */
+  }
+  
+  .hideInPrint {
+    display: none;
   }
 }
 
