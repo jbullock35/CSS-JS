@@ -236,7 +236,9 @@ tfoot > tr > td {
   }    
 
   /* Ensure no margin-top when <h2> appears after a .pageBreak div. */
-  .pageBreak + h2, .pageBreak + div.level2 h2:first-child {
+  .pageBreak + h2, 
+  .pageBreak + div.level2 h2:first-child, 
+  div div .pageBreak:last-child + div.level2 h2:first-child {
     margin-top: 0;
   }
   
@@ -252,6 +254,11 @@ tfoot > tr > td {
   pre {
     min-width: 90ch;  /* printing code blocks */
   }
+  
+  .tablePrint_small {
+    font-size: 0.7rem !important;
+  }
+  
   
   .hideInPrint {
     display: none;
