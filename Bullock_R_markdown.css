@@ -101,6 +101,9 @@ li p:first-of-type {    /* Don't indent first paragaph in bullet list. */
   text-indent: 0;
 }
 
+.tightList {
+  margin-top: -1ex;  /* Added for gradAdmissions_2020-21_cycle.Rmd  [2021 05 06]  */
+}
 .tightList li:not(:first-child) {
   margin-top: 0.67ex !important;
 }
@@ -112,11 +115,14 @@ li p:first-of-type {    /* Don't indent first paragaph in bullet list. */
 
 
 /* SECTION HEADINGS */
+/* Changed font-size so that there is separation of at least 0.2rem between
+   each h1-h3. Did this for gradAdmissions_2020-21_cycle.Rmd.  
+   [2021 05 06]  */
 h1, .title, h1.title { 
-  font-size: 1.85rem;
+  font-size: 1.9rem;
 }
 h2 { 
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   margin-top: 4.5em; 
 }
 h3 { 
@@ -166,12 +172,27 @@ tfoot > tr > td {
 }    
 
 
+/* SPECIAL RULES FOR PRINTING */
+@media print {
+  #TOC {
+    display: none;
+  }
+}
+
 
 /* FLOATING TABLE OF CONTENTS */
 /* By default, a floating TOC will add huge vertical whitespace 
    to the end of the page. This CSS rule fixes the problem. */
 .tocify-extend-page {
   height: 0 !important;
+}
+
+/* Prevent subheadings from appearing too large. Added for 
+   gradAdmissions_2020-21_cycle.Rmd. Affects appearance only with a floating
+   TOC for which "collapsed: false" is specified in the YAML header.
+   [2021 05 07]  */
+.tocify-subheader .tocify-item { 
+  font-size: 0.90em !important;
 }
 
 
@@ -185,7 +206,8 @@ tfoot > tr > td {
 }
 
 @media print {
-  /* body { font-size: 16pt; }  */
+  body { font-size: 18pt; }
+  
   a {
     text-decoration: underline;
   }
@@ -195,6 +217,9 @@ tfoot > tr > td {
   h1, h2, h3, h4 { 
     break-after: avoid;
     page-break-after: avoid;
+  }
+  .title {
+    margin-top: 0 !important;  /* Added for gradAdmissions_2020-21_cycle.Rmd. */
   }
   #TOC {
     display: none;
