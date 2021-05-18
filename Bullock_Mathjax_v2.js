@@ -1,7 +1,7 @@
 <script type="text/x-mathjax-config">
-  // AssistiveMML has been dropped in MathJax 3.0, but RStudio isn't using it
-  // yet. When I print a selection from Chrome, it causes inline math to print
-  // twice. [2020 02 05]
+  // AssistiveMML has been dropped in MathJax 3.0, but RStudio isn't yet 
+  // using MathJax 3.0. When I print a selection from Chrome, it causes 
+  // inline math to print twice. [2020 02 05]
 
   // To insert this script into an R Markdown file, put it in a 
   // <script type="text/x-mathjax-config"> container.  [2020 02 17]
@@ -20,6 +20,7 @@
     TeX: {
       extensions: ["cancel.js", "color.js", "enclose.js"],
       Macros: {
+        backone: "\\mspace{-1mu}",
         backtwo: "\\mspace{-2mu}",
         cov: ["\\textrm{cov}\\backtwo\\left(#1\\right)", 1],
         E: ["E\\backtwo\\left[#1\\right]", 1],
