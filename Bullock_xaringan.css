@@ -30,6 +30,10 @@ pre {
   margin-bottom: 0;
   width: 120%;
 }
+.codeBg125 pre {  /* Expand width of grey background for code. */
+  width: 125%;
+}
+
 .remark-code-line {
   padding-left: 1em;
   font-size: 18pt;
@@ -73,25 +77,63 @@ li > ul > li:not(:last-child) {
   margin-bottom: 2ex !important;
 }
 
-.tightList li:first-child {
+ol > li > ol {  /* nested list */
+  list-style-type: lower-alpha;  /* item numbers 1a, 1b, etc. */
+}
+
+.tightList li:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.tightList > ol > li {   /* top-level list items */
+  margin-top: 1.5ex;
+}
+
+/* Changed from .tightList li:first-child because it caused the first item 
+   in a nested list to be too high. See matching.Rmd for an example.
+   [2021 05 23]  */
+.tightList > ol > li:first-child {
 	margin-top: -1ex !important;
 }
-.tightList li:not(:last-child) {
-  margin-bottom: 1.33ex !important;
+
+.tightList li > ol li {  /* nested list */
+  margin-top: 0.25ex !important;
 }
 
+/* Commented out: it seems best to set only margin-top *except* for the 
+   last item in a list, which may also require an extra margin-bottom.
+   [2021 05 23]
 
-/* For "outline" slide in mediationAnalysis.Rmd.
+  .tightList li:not(:last-child) {
+    margin-bottom: 1.33ex !important;
+  }
+*/
+
+
+
+/* For "outline" slide in mediationAnalysis.Rmd. */
 .tightListHalf li > ul {
   margin-top: 1.5ex;
 }
 
-.tightListHalf li:first-child {
+/* Changed from .tightListHalf li:first-child because it caused the first item 
+   in a nested list to be too high. See matching.Rmd for an example.
+   [2021 05 23]  */
+.tightListHalf > ol > li:first-child {
 	margin-top: -.5ex !important;
 }
-.tightListHalf li:not(:last-child) {
+
+/* Changed from .tightListHalf li:not(:last-child) because I didn't want it 
+   to govern the items in a nested list. See the outline slide in 
+   matching.Rmd for an example.  [2021 05 23]  */
+.tightListHalf > ol > li:not(:last-child) {
   margin-bottom: 2.5ex !important;
 }
+
+.tightListHalf > ol ol > li:not(:last-child) {
+  margin-bottom: 1ex !important;
+}
+
 
 
 /* MULTIPLE COLUMNS */
@@ -102,8 +144,25 @@ li > ul > li:not(:last-child) {
   float: left;
   width: 35%;
 }
+.pullLeft50 {  /* Left column will take 50% of available space. */
+  float: left;
+  width: 50%;
+}
 .pullRight {
   float: right;
+}
+
+/* Add to ensure margin-top alignment if using only one of .pullLeftXX or 
+   .pullRight. See causalInference/lectures/mediation/mediationAnalysis.Rmd 
+   for an example.  */
+.pullLeft35 > p {
+  margin-top: 0;
+}
+.pullLeft50 > p {
+  margin-top: 0;
+}
+.pullRight50 > p {
+  margin-top: 0;
 }
 
 
@@ -212,6 +271,9 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 }
 .displayEquationLeft .MathJax.MathJax_FullWidth {
   text-align: left !important;
+}
+.up1em {
+  margin-top: -1em;  /*  Use as <div class="up1em"></div>  */
 }
 
 
