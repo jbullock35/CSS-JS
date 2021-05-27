@@ -62,25 +62,36 @@ pre {
 
 
 
-
+/* ************************************************************************/
 /* LISTS */
-/* Spacing between list items */
+/* ************************************************************************/
+
+/* Changed from margin-bottom: 4ex because it wasn't working in the simple 
+   case in which <p> was followed by <ul> with multiple items. 4ex was just
+   too much. At present, "inherit" sets to 1ex, which seems OK. See 
+   matching.Rmd > "Don't drop variables on the basis of balance checks" for 
+   an example. */
+li:not(:last-child) {
+  margin-bottom: inherit;  
+}
+
+
+/* NESTED LISTS */
 li > ul {
   margin-top: 2ex;
 }
-
-li:not(:last-child) {
-  margin-bottom: 4ex;
-}
-
 li > ul > li:not(:last-child) {
   margin-bottom: 2ex !important;
 }
-
 ol > li > ol {  /* nested list */
   list-style-type: lower-alpha;  /* item numbers 1a, 1b, etc. */
 }
 
+
+
+
+
+/* MODIFICATIONS FOR "TIGHT" LISTS */
 .tightList li:not(:last-child) {
   margin-bottom: 0;
 }
@@ -110,7 +121,7 @@ ol > li > ol {  /* nested list */
 */
 
 
-
+/* MODIFICATIONS FOR "HALF-TIGHT" LISTS */
 /* For "outline" slide in mediationAnalysis.Rmd. */
 .tightListHalf li > ul {
   margin-top: 1.5ex;
@@ -272,9 +283,10 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 .displayEquationLeft .MathJax.MathJax_FullWidth {
   text-align: left !important;
 }
-.up1em {
-  margin-top: -1em;  /*  Use as <div class="up1em"></div>  */
-}
+.left1em { margin-left: -1em; }
+.left2em { margin-left: -2em; }
+.up1em { margin-top: -1em; }  /*  Use as <div class="up1em"></div>  */
+
 
 
 .inline .MathJax_Display {  /* Use this to set display equations inline. */
