@@ -159,23 +159,29 @@ ol > li > ol {  /* nested list */
   float: left;
   width: 50%;
 }
-.pullRight {
-  float: right;
-}
+
+.pullLeft50 pre { width: 100%; }
+
+.pullRight { float: right; }
+
+
+/* See matching.Rmd > "Matching exercises, continued" for a two-column 
+   layout that includes code.  [2021 05 27]  */
+.twoColumn .remark-code      { padding: 0.5em 0 !important; }
+.twoColumn .remark-code-line { padding-left: 0; }
+.pullRight pre { max-width: 100%;}  
+
+
 
 /* Add to ensure margin-top alignment if using only one of .pullLeftXX or 
    .pullRight. See causalInference/lectures/mediation/mediationAnalysis.Rmd 
    for an example.  */
-.pullLeft35 > p {
-  margin-top: 0;
-}
-.pullLeft50 > p {
-  margin-top: 0;
-}
-.pullRight50 > p {
-  margin-top: 0;
-}
-
+:is(.pullLeft35, .pullLeft50, .pullRight) > p { margin-top: 0; }
+  /* 
+    .pullLeft35 > p { margin-top: 0; }
+    .pullLeft50 > p { margin-top: 0; }
+    .pullRight  > p { margin-top: 0; }
+  */
 
 
 
@@ -201,6 +207,7 @@ ol > li > ol {  /* nested list */
 .remark-toolbar-timer {
   display: none !important;
 }
+
 
 
 /* TABLES */
@@ -238,18 +245,12 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 
 
 /* SPECIAL SLIDES */
-.upHalfLine {
+:is(.upHalfLine, .upOneLine) {
 	padding-top: 0;
 	margin-top: 0;
 }
 .upHalfLine h2 {
 	padding-top: 1.75ex;
-	margin-top: 0;
-}
-
-
-.upOneLine {
-	padding-top: 0;
 	margin-top: 0;
 }
 .upOneLine h2 {
