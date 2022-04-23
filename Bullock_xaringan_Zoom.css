@@ -20,6 +20,6 @@
 }
 
 .remark-notes > p:last-child {
-  margin-bottom: 5em !important;  /* allow scrolling last lines of notes to top of screen */
+  margin-bottom: 35em !important;  /* allow scrolling last lines of notes to top of screen. Use 5em if I want a small window. */
 }
 
