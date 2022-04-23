@@ -9,7 +9,7 @@
 
 .remark-bottom-area {
   top: -1.5em !important;
-  width: 60ch;
+  width: 55ch;
   /* height: 30ex; */   /* shorten the window so that it never goes to bottom of screen. Useful for laptop, not desktop. */
 }
 
