@@ -189,7 +189,7 @@ ol > li > ol {  /* nested list */
 /* Eliminate the notes for the next slide, thereby making more space for notes
    on the current slide. */
 .remark-notes {
-	font-size: 135%;
+	font-size: 135%;  
 }
 .remark-notes li:first-child {
 	margin-top: -1ex;

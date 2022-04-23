@@ -10,11 +10,12 @@
 .remark-bottom-area {
   top: -1.5em !important;
   width: 60ch;
-  height: 30ex;
+  /* height: 30ex; */   /* shorten the window so that it never goes to bottom of screen. Useful for laptop, not desktop. */
 }
 
 .remark-notes {
-	font-size: 125%;     /* versus 135% when not recording or presenting by Zoom */
+	font-size: 110%;      /* 110% for big screen, 125% for laptop */
+	line-height: 1.2;   
 	padding-right: 20px;  /* a little space between last characters and the control bar */
 }
 
