@@ -19,7 +19,7 @@
 	padding-right: 20px;  /* a little space between last characters and the control bar */
 }
 
-.remark-notes > p:last-child {
-  margin-bottom: 35em !important;  /* allow scrolling last lines of notes to top of screen. Use 5em if I want a small window. */
+.remark-notes > *:last-child {     /* Get last child (not last descendant) of .remark-notes */
+  margin-bottom: 50em !important;  /* allow scrolling last lines of notes to top of screen. Use 5em if I want a small window. */
 }
 
