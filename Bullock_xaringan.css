@@ -186,8 +186,8 @@ ol > li > ol {  /* nested list */
 
 
 /* PRESENTER NOTES */
-/* Eliminate the notes for the next slide, thereby making more space for notes
-   on the current slide. */
+/* Eliminate the notes for the next slide, thereby making more space for 
+   notes on the current slide. */
 .remark-notes {
 	font-size: 135%;  
 }
@@ -207,6 +207,13 @@ ol > li > ol {  /* nested list */
 .remark-toolbar-timer {
   display: none !important;
 }
+
+/* Formatting for collapsible sections. They're useful if I don't want to 
+   say something by default but do want to have something scripted in case 
+   questions come up. */
+summary { background: white }
+details { background: #80808042 }
+
 
 
 
