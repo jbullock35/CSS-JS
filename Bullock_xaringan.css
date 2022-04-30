@@ -267,6 +267,9 @@ th:not(:first-child), td:not(:first-child) { padding-right: 1.25em; }
 .noSlideNumber .remark-slide-number {
   display: none;
 }
+.blueText {
+  color: rgb(0, 0, 238);  /* link color */
+}
 .whiteText {
   color: white;
 }
