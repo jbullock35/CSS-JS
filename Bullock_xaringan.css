@@ -77,10 +77,10 @@ li:not(:last-child) {
 
 
 /* NESTED LISTS */
-li > ul {
+li > :is(ol, ul) {
   margin-top: 2ex;
 }
-li > ul > li:not(:last-child) {
+li > :is(ol, ul) > li:not(:last-child) {
   margin-bottom: 2ex !important;
 }
 ol > li > ol {  /* nested list */
@@ -92,24 +92,33 @@ ol > li > ol {  /* nested list */
 
 
 /* MODIFICATIONS FOR "TIGHT" LISTS */
+/* Recall that the "tightList" class will be applied to the slide, not to 
+   the list itself. */
 .tightList li:not(:last-child) {
   margin-bottom: 0;
 }
 
-.tightList > ol > li {   /* top-level list items */
-  margin-top: 1.5ex;
-}
 
+.tightList li > :is(ol, ul) {     /* nested list */
+  margin-top: 0;
+}
+.tightList li > :is(ol, ul) li {  /* items in nested list */
+  margin-top: 0.25ex !important;
+}
+.tightList li > :is(ol, ul) > li:not(:last-child) {  /* items in nested list other than last child */
+  margin-bottom: 0 !important;
+}
+.tightList li > :is(ol, ul) li:last-child {          /* last child in nested list */
+  margin-bottom: 1ex;
+}
+  
 /* Changed from .tightList li:first-child because it caused the first item 
    in a nested list to be too high. See matching.Rmd for an example.
    [2021 05 23]  */
-.tightList > ol > li:first-child {
+.tightList > :is(ol, ul) > li:first-child {
 	margin-top: -1ex !important;
 }
 
-.tightList li > ol li {  /* nested list */
-  margin-top: 0.25ex !important;
-}
 
 /* Commented out: it seems best to set only margin-top *except* for the 
    last item in a list, which may also require an extra margin-bottom.
@@ -123,25 +132,25 @@ ol > li > ol {  /* nested list */
 
 /* MODIFICATIONS FOR "HALF-TIGHT" LISTS */
 /* For "outline" slide in mediationAnalysis.Rmd. */
-.tightListHalf li > ul {
+.tightListHalf li > :is(ol, ul) {
   margin-top: 1.5ex;
 }
 
 /* Changed from .tightListHalf li:first-child because it caused the first item 
    in a nested list to be too high. See matching.Rmd for an example.
    [2021 05 23]  */
-.tightListHalf > ol > li:first-child {
+.tightListHalf > :is(ol, ul) > li:first-child {
 	margin-top: -.5ex !important;
 }
 
 /* Changed from .tightListHalf li:not(:last-child) because I didn't want it 
    to govern the items in a nested list. See the outline slide in 
    matching.Rmd for an example.  [2021 05 23]  */
-.tightListHalf > ol > li:not(:last-child) {
+.tightListHalf > :is(ol, ul) > li:not(:last-child) {
   margin-bottom: 2.5ex !important;
 }
 
-.tightListHalf > ol ol > li:not(:last-child) {
+.tightListHalf > :is(ol, ul) :is(ol, ul) > li:not(:last-child) {
   margin-bottom: 1ex !important;
 }
 
