@@ -43,5 +43,23 @@
   let myLists7 = document.querySelectorAll(".listStart7 ol");
   myLists7.forEach(function (x) { x.setAttribute("start", 7) } );
   
+  
+  /* Slide numbering when I have appendix slides. The idea is that I may have  
+     30 slides but want the numbers in the lower right-hand corner to say 
+     2/20, 2/20, 3/20, etc. -- to prevent the audience from thinking that I 
+     need to get through 30 slides. 
+       This function works, in the sense that I can call it in the console. 
+    But I haven't found a way to work it into the display of slide numbers
+    in the lower right-hand side of the screen. */
+  function numLastMainSlide() { 
+    return slideshow.getSlideByName("lastMainSlide").getSlideNumber(); 
+  }  
+  
+  
+
 //}
 </script>
+
+
+
+
