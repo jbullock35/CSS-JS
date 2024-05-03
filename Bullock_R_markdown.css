@@ -9,7 +9,8 @@ body {
 }
 
 code {
-  font-size: 110%;  /* affects only inline code displays */
+  /* 100% is better than 110% for my QMD files. */
+  /* font-size: 110%; */   /* affects only inline code displays */ 
 }
 
 p {
