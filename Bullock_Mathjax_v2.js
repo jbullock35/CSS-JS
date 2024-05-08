@@ -20,6 +20,7 @@
     TeX: {
       extensions: ["cancel.js", "color.js", "enclose.js"],
       Macros: {
+        abs: ["\\left\\lvert #1 \\right\\rvert", 1],
         backone: "\\mspace{-1mu}",
         backtwo: "\\mspace{-2mu}",
         cov: ["\\textrm{cov}\\backtwo\\left(#1\\right)", 1],
