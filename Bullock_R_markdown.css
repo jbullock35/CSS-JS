@@ -11,6 +11,7 @@ body {
 code {
   /* 100% is better than 110% for my QMD files. */
   /* font-size: 110%; */   /* affects only inline code displays */ 
+  vertical-align: 4%;  /* Slightly raise baseline of monospaced type. Looks better in Quarto output. */
 }
 
 p {
